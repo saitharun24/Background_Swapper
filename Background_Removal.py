@@ -25,7 +25,7 @@ def init(width, height, fps):
     return cap
 
 if __name__ == "__main__":
-    filename = 'E:/College Stuff/Fun Projects/Image Processing/Background Removal/BackgroundImages'
+    filename = '<The path where the sample background files are located in your computer>'
 
     # Collecting the width, height, frames per second and the swapping threshold as command line arguments
     parser = argparse.ArgumentParser(description='Change the background of your video')
@@ -45,10 +45,10 @@ if __name__ == "__main__":
     cap = init(width, height, fps)
 
     # Reading all the sample backgrounds and appending them into a list
-    listImg = os.listdir("BackgroundImages/resized")
+    listImg = os.listdir(filename+"/resized")
     imgList = []
     for imgPath in listImg:
-        img = cv2.imread(f'BackgroundImages/resized/{imgPath}')
+        img = cv2.imread(f'{filename}/resized/{imgPath}')
         imgList.append(img)
 
     indexImg = 0
