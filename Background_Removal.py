@@ -25,6 +25,7 @@ def init(width, height, fps):
     return cap
 
 if __name__ == "__main__":
+    
     filename = '<The path where the sample background files are located in your computer>'
 
     # Collecting the width, height, frames per second and the swapping threshold as command line arguments
